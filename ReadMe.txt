@@ -6,7 +6,7 @@ There is a web and service layer but no data later(for sake of time, using servi
 
 I have not implemented a login or user service class or added user data to the session. Products and Bids have data hardcoded to the session. Ideally we would have a different table to seperate product data and product auction data(start/end time, price, etc) since a seller could relist the same product. 
 
-A full site would have a data layer, login, a homepage with categories, products with images, search bar, menu with user order history, account information, items selling, etc.
+A full site would have a data layer, login, a homepage with categories, products with images, search bar, menu with user order history, account information, items selling, etc. The current product listing page is also missing the bid history and current high bidder. 
 
 To run project:
 
