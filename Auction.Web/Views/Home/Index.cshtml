@@ -1,0 +1,16 @@
+﻿@using Auction.Service.Models
+
+@model List<ProductBidViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Auction Site</h2>
+        <h3>Featured Items</h3>
+        <br />
+        @await Html.PartialAsync("../Product/_ProductList.cshtml", Model)
+    </div>
+</div>

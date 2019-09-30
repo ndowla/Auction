@@ -1,0 +1,17 @@
+﻿@using Auction.Service.Models
+
+@model List<ProductBidViewModel>
+
+@foreach (var product in Model)
+{
+    <div class="row">
+        <div class="col-md-3">
+            <a asp-controller="Product" asp-action="Product" asp-route-id="@product.ProductId">@product.Name</a>
+        </div>
+        <div class="col-md-2">
+            @string.Format("{0:C}", product.CurrentPrice)
+        </div>
+    </div>
+    <br>
+}
+

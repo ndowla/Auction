@@ -1,0 +1,98 @@
+﻿@using Auction.Service.Models
+
+@model ProductBidViewModel
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+@*todo: include script in prj*@
+
+<form asp-controller="Product" asp-action="Bid" method="post">
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <h3> @Model.Name </h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            @Model.Description
+        </div>
+    </div>
+    <br />
+    @if (Model.AuctionEndDate <= DateTime.Now)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <b>This item auction has ended!</b>
+            </div>
+        </div>
+        <br />
+    }
+    <div class="row">
+        <div class="col-md-3">
+            Seller:
+        </div>
+        <div class="col-md-3">
+            <a>@Model.SellerName</a> @*Page does not exist*@
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            Starting Price:
+        </div>
+        <div class="col-md-3">
+            @string.Format("{0:C}", Model.StartPrice)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            Current Price:
+        </div>
+        <div class="col-md-3">
+            @string.Format("{0:C}", Model.CurrentPrice)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            Auction Ends:
+        </div>
+        <div class="col-md-3">
+            @Model.AuctionEndDate.ToString("MM/dd/yyyy h:mm tt")
+        </div>
+    </div>
+    <br />
+    @if (Model.AuctionEndDate > DateTime.Now)
+    {
+        <div class="row">
+            <div class="col-md-3">
+                Your Bid:
+            </div>
+            <div class="col-md-3">
+                <input asp-for="BidAmount" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" id="btnPlaceBid">Place Bid</button>
+            </div>
+        </div>
+    }
+    <input asp-for="AuctionEndDate" type="hidden" />
+    <input asp-for="CurrentPrice" type="hidden" />
+    <input asp-for="ProductId" type="hidden" />
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnPlaceBid").click(confirmBidPrice);
+        //todo: add nicer display of error message, maybe implement a max bid amount based on current price
+        function confirmBidPrice() {
+            var bidPrice = $("#BidAmount").val();
+            var currentPrice = $("#CurrentPrice").val();
+            if (isNaN(bidPrice) || parseFloat(bidPrice) <= parseFloat(currentPrice)) {
+                alert("Please enter a valid amount higher than current price");
+                return false;
+            }
+        }
+    });
+</script>

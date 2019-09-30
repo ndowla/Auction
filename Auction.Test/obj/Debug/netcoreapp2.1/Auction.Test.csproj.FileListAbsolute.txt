@@ -1,0 +1,15 @@
+C:\Users\ndowla\source\repos\Auction\Auction.Test\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\Users\ndowla\source\repos\Auction\Auction.Test\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\Users\ndowla\source\repos\Auction\Auction.Test\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\Users\ndowla\source\repos\Auction\Auction.Test\bin\Debug\netcoreapp2.1\Mono.Cecil.dll
+C:\Users\ndowla\source\repos\Auction\Auction.Test\bin\Debug\netcoreapp2.1\Auction.Test.deps.json
+C:\Users\ndowla\source\repos\Auction\Auction.Test\bin\Debug\netcoreapp2.1\Auction.Test.runtimeconfig.json
+C:\Users\ndowla\source\repos\Auction\Auction.Test\bin\Debug\netcoreapp2.1\Auction.Test.runtimeconfig.dev.json
+C:\Users\ndowla\source\repos\Auction\Auction.Test\bin\Debug\netcoreapp2.1\Auction.Test.dll
+C:\Users\ndowla\source\repos\Auction\Auction.Test\bin\Debug\netcoreapp2.1\Auction.Test.pdb
+C:\Users\ndowla\source\repos\Auction\Auction.Test\obj\Debug\netcoreapp2.1\Auction.Test.csprojAssemblyReference.cache
+C:\Users\ndowla\source\repos\Auction\Auction.Test\obj\Debug\netcoreapp2.1\Auction.Test.csproj.CoreCompileInputs.cache
+C:\Users\ndowla\source\repos\Auction\Auction.Test\obj\Debug\netcoreapp2.1\Auction.Test.AssemblyInfoInputs.cache
+C:\Users\ndowla\source\repos\Auction\Auction.Test\obj\Debug\netcoreapp2.1\Auction.Test.AssemblyInfo.cs
+C:\Users\ndowla\source\repos\Auction\Auction.Test\obj\Debug\netcoreapp2.1\Auction.Test.dll
+C:\Users\ndowla\source\repos\Auction\Auction.Test\obj\Debug\netcoreapp2.1\Auction.Test.pdb
